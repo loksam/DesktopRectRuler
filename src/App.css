@@ -50,11 +50,16 @@ body {
 #width, #height {
   display: inline-block;
   font-size: 40px;
-  color: #5498f3;
+  color: #006dff;
 }
 
 #x {
   display: inline-block;
   font-size: 28px;
   color: #5498f3;
+}
+
+#ratio {
+  font-size: 25px;
+  color: red;
 }
