@@ -31,3 +31,30 @@
     transform: rotate(360deg);
   }
 }
+
+html,body {
+  height: 100%;
+}
+body {
+  margin: 0; 
+  -webkit-app-region: drag; 
+  border: solid 10px red; 
+  box-sizing:border-box; 
+  opacity: 0.5;
+}
+
+.App {
+  height: 100%;
+}
+
+#width, #height {
+  display: inline-block;
+  font-size: 40px;
+  color: #5498f3;
+}
+
+#x {
+  display: inline-block;
+  font-size: 28px;
+  color: #5498f3;
+}

@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React , { useState, useEffect } from 'react';
 import './App.css';
+import EventListener from 'react-event-listener';
 
 function App() {
+  const [width, setWidth] = useState(800);
+  const [height, setHeight] = useState(600);
+
+  useEffect(() => {
+    document.getElementById('width').innerHTML = width;
+    document.getElementById('height').innerHTML = height;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+    <EventListener target="window" onResize={() => { setWidth(window.innerWidth); setHeight(window.innerHeight)}} />
+     <div id="width">0</div>
+     &nbsp;<div id="x">x</div>&nbsp;
+     <div id="height">0</div>
     </div>
   );
 }
